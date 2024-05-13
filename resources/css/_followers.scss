@@ -1,0 +1,68 @@
+.followers {
+    max-width: 450px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #252836;
+    &__heading {
+        color: #fff;
+        font-size: 16px;
+        line-height: 22px;
+        font-family: 'Poppins';
+        margin-bottom: 25px;
+    }
+    &__ul {
+        li {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            a {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+            }
+        }
+        li + li {
+            margin-top: 25px;
+        }
+    }
+    &__avatar {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-right: 30px;
+    }
+    &__name {
+        color: #fff;
+        font-size: 14px;
+        line-height: 18px;
+        font-family: 'Poppins', sans-serif;
+    }
+    &__form {
+        margin-left: auto;
+    }
+    &__form--btn {
+        border: none;
+        background: none;
+        color: #fff;
+        font-size: 16px;
+        line-height: 20px;
+        font-family: 'Poppins', sans-serif;
+        border-radius: 6px;
+        background-color: rgb(224, 52, 52);
+        padding: 10px 16px;
+    }
+}
+
+@media (max-width: 340px) {
+    .followers__avatar {
+        margin-right: 10px;
+    }
+    .followers__form--btn {
+        padding: 5px 8px;
+    }
+}

@@ -1,0 +1,302 @@
+.private{
+    &__wrapper{
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid $inputBgDark;
+        padding-bottom: 30px;
+    }
+    &__block--left{
+        flex-grow: 2;
+        padding: 20px 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 15px;
+        position: relative;
+    }
+    &__block--avatar{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: black;
+        margin-bottom: 30px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    &__block--avatar__link{
+        position: absolute;
+        top: 82px;
+        left: 65%;
+        transform: translate(-50%, 0);
+        padding: 7px 10px 4px;
+        background-color: $buttonGrey;
+        @include pop400;
+        font-size: 16px;
+        line-height: 20px;
+        color: $textWhite;
+        text-decoration: none;
+        margin-bottom: 20px;
+        border-radius: $buttonRadius;
+        opacity: 0.7;
+    }
+    &__block--avatar__icon{
+        width: 25px;
+        height: 25px;
+        fill: $textWhite;
+    }
+    &__block--avatar__name{
+        @include pop600;
+        font-size: 16px;
+        line-height: 24px;
+        color: $textWhite;
+    }
+    &__block--main{
+        flex-grow: 6;
+    }
+    &__block--main__buttons{
+        form{
+            position: relative;
+        }
+    }
+    &__block--main__name,
+    &__block--main__email{
+        @include pop400;
+        font-size: 16px;
+        line-height: 24px;
+        color: $textWhite;
+        margin-bottom: 20px;
+    }
+    &__block--main__joined--wrapper{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    &__block--main__joined--icon{
+        fill: $textWhite;
+        margin-right: 20px;
+    }
+    &__block--main__joined--text{
+        @include pop400;
+        font-size: 16px;
+        line-height: 24px;
+        color: $textWhite;
+    }
+    &__block--button__action,
+    &__block--button__destroy,
+    &__block--button__save{
+        padding: 7px 20px;
+        @include pop400;
+        background-color: $buttonGrey;
+        font-size: 14px;
+        line-height: 20px;
+        color: $textWhite;
+        border: none;
+        outline: none;
+        border-radius: $buttonRadius;
+        margin-right: 5px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    &__block--button__action{
+        display: flex;
+        align-items: center;
+        svg{
+            fill: $textGrey;
+            margin-left: 10px;
+            transition: all ease .3s;
+        }
+        &.unfollow{
+            position: absolute;
+            top: 110%;;
+            right: 0;
+            display: none;
+        }
+    }
+    &__block--button__destroy{
+        background-color: $buttonRed;
+    }
+    &__block--button__save{
+        background-color: $notificationGreen;
+    }
+    &__block--main__form{
+        max-width: 300px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    &__block--main__form--label{
+        max-width: 300px;
+        width: 100%;
+    }
+    &__block--main__form--p{
+        @include pop400;
+        font-size: 16px;
+        line-height: 24px;
+        color: $textWhite;
+        margin-bottom: 10px;
+    }
+    &__block--main__form--input{
+        width: 100%;
+        border: none;
+        outline: none;
+        @include pop400;
+        font-size: 14px;
+        line-height: 20px;
+        color: $textWhite;
+        padding: 6px 10px;
+        background-color: $inputBgDark;
+        border-radius: $buttonRadius;
+        margin-bottom: 20px;
+    }
+    &__block--main__form--textarea{
+        border: none;
+        outline: none;
+        width: 100%;
+        min-height: 120px;
+        resize: none;
+        padding: 6px 10px;
+        @include pop400;
+        font-size: 14px;
+        line-height: 20px;
+        background-color: $inputBgDark;
+        color: $textWhite;
+        border-radius: $buttonRadius;
+        margin-bottom: 20px;
+    }
+    &__block--avatar__update--popUp{
+        max-width: 300px;
+        display: none;
+        width: 100%;
+        padding: 10px;
+        background-color: $themeBgDark;
+        border: 1px solid $textGrey;
+        border-radius: $buttonRadius;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        overflow: hidden;
+        text-align: center;
+        filter: drop-shadow(0px 0px 24px #000);
+    }
+    &__block--avatar__update--popUp__inner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__block--right{
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__block--right__follow--wrapper{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    &__block--right__follow--inner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__block--right__follow--text,
+    &__block--right__follow--counter{
+        @include pop400;
+        font-size: 16px;
+        line-height: 24px;
+        color: $textWhite;
+        margin-bottom: 15px;
+    }
+    &__block--avatar__update--avatar__old{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-bottom: 20px;
+    }
+    &__block--avatar__update--form{
+        margin-top: auto;
+    }
+    &__block--avatar__update--form__label{
+        @include pop400;
+        font-size: 12px;
+        line-height: 18px;
+        color: $textWhite;
+        margin-bottom: 10px;
+    }
+    &__block--avatar__update--form__file{
+        margin-bottom: 10px;
+        color: $textWhite;
+        @include pop400;
+        font-size: 10px;
+    }
+    &__block--avatar__update--form__button{
+        padding: 6px 10px;
+        @include pop400;
+        font-size: 12px;
+        line-height: 18px;
+        color: $textWhite;
+        cursor: pointer;
+        border: none;
+        border-radius: $buttonRadius;
+        background-color: $buttonPurple;
+    }
+    &__channels--wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+    &__channels--counter__wrapper{
+        text-align: center;
+        padding: 30px 0 20px;
+        border-bottom: 1px solid $inputBgDark
+    }
+    &__channels--counter{
+        @include pop400;
+        font-size: 16px;
+        line-height: 24px;
+        color: $textWhite;
+    }
+    &__channels--suggestions{
+        @include pop400;
+        font-size: 16px;
+        line-height: 24px;
+        color: $textWhite;
+    }
+    &__channels--suggestions__link{
+        color: $textWhite;
+    }
+}
+
+@media (max-width: 770px){
+    .private__block--main__buttons{
+        display: flex;
+        flex-direction: column;
+        button + button {
+            margin-top: 10px;
+        }
+    }
+}
+@media (max-width: 595px){
+    .private__wrapper{
+        flex-direction: column;
+        align-items: center;
+    }
+    .private__block--left{
+        margin-right: 0;
+    }
+    .private__block--main__joined--wrapper{
+        margin-bottom: 20px;
+    }
+    .private__block--right{
+        max-width: 300px;
+        width: 100%;
+    }
+    .private__block--right__follow--wrapper{
+        justify-content: space-around;
+    }
+}

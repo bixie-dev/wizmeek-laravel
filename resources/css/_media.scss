@@ -1,0 +1,265 @@
+/* Header bar styles */
+
+
+@media (max-width: 1112px){
+    .video__player{
+        width: 550px;
+    }
+    .my-video-dimensions{
+        height: 310px;
+    }
+    .belowVideo__info{
+        max-width: 330px;
+    }
+}
+
+/* 1100px */
+@media (max-width: 1100px) {
+    .video{
+        flex-direction: column;
+    }
+    .video__player--wrapper{
+        margin-right: 0;
+    }
+    .video__player--wrapper__player .video-js.vjs-default-skin{
+        width: calc(100vw - 30px);
+        height: calc((100vw - 30px) / 16 * 9);
+    }
+    .video__player--wrapper__player .video-js.vjs-default-skin video{
+        width: calc(100vw - 30px);
+        height: calc((100vw - 30px) / 16 * 9);
+    }
+    .video__chat--box{
+        width: 100%;
+        margin-left: 0;
+        margin-top: 15px;
+    }
+    .video__chat--send__message--wrapper{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+/* 990px */
+@media (max-width: 990px){
+    .belowVideo__info{
+        max-width: 500px;
+    }
+}
+
+/* 850px */
+@media (max-width: 850px){
+    .my-video-dimensions{
+        height: 462px;
+    }
+    .video__player--wrapper{
+        margin-right: 0;
+    }
+    .video__player{
+        margin-bottom: 15px;
+    }
+    .video__chat--box__close{
+        display: none;
+    }
+    .video__chat--message__area{
+        height: 390px;
+    }
+    .video__chat--send__message--wrapper{
+        max-width: 580px;
+    }
+    .plyr--video{
+        max-width: 100%;
+    }
+    .belowVideo__social--block{
+        margin-bottom: 15px;
+    }
+    .footer__block:nth-child(2){
+        max-width: 150px;
+    }
+}
+
+/* 770px */
+@media (max-width: 770px){
+    .channel__description{
+        max-width: 350px;
+    }
+    .belowVideo__wrapper{
+        flex-direction: column;
+    }
+    .belowVideo__info{
+        max-width: 710px;
+        margin-bottom: 40px;
+    }
+    .belowVideo__related{
+        align-self: center;
+    }
+    .header__user--name{
+        display: none;
+    }
+    .header__user--notifications{
+        margin-right: 40px;
+    }
+    .header__user{
+        margin-right: 30px;
+    }
+    .footer__block + .footer__block{
+        margin-left: 30px;
+    }
+}
+/* 580px */
+@media (max-width: 580px) and (orientation: landscape){
+    .video__player--wrapper__player .video-js.vjs-default-skin video{
+        width: 100vw;
+        height: 100vh;
+    }
+    .video-js{
+        width: 100vw !important;
+        height: 100vh !important;
+    }
+}
+@media (max-width: 580px){
+    .my-video-dimensions{
+        height: 308px;
+    }
+    
+    .request__repeat--form__wrapper{
+        width: 150px;
+    }
+    .channel__edit--popup{
+        max-width: 370px;
+        width: 100%;
+        margin: 0px 10px;
+    }
+    .belowVideo__social--repeat__text{
+        display: none;
+    }
+    .footer{
+        padding-top: 0;
+        border-top: none;
+    }
+}
+
+/* 510px */
+@media (max-width: 510px) {
+    .header__logo--test {
+        display: none;
+    }
+}
+
+/* 460px */
+@media (max-width: 460px){
+    .header__logo{
+        width: 180px;
+        height: 33px;
+    }
+    .header__nav--ul{
+        display: none;
+    }
+    .header__user{
+        margin-right: 15px;
+    }
+    .header__user--dropdown{
+        left: -15px;
+    }
+    .channel__description{
+        max-width: 200px;
+    }
+    .belowVideo__social--share__text{
+        display: none;
+    }
+    .video__chat--box{
+        width: 100%;
+        padding: 0;
+    }
+    .video__chat--message__wrapper{
+        padding: 10px 10px;
+    }
+    .video__chat--message__text,
+    .video__chat--message__date{
+        width: calc(100% - 37px);
+    }
+    .video__chat--message__wrapper{
+        width: 100%;
+    }
+    .video__chat--send__message--wrapper{
+        width: calc(100% - 30px);
+    }
+    .belowVideo__social--block__mobile{
+        display: flex;
+        justify-content: end;
+    }
+    .belowVideo__social--stats{
+        span{
+            display: none;
+        }
+    }
+    .footer__wrapper{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer__block + .footer__block{
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
+
+/* 417px */
+@media (max-width: 417px){
+    .header__user--notifications{
+        display: none;
+    }
+    .my-video-dimensions{
+        height: 240px;
+    }
+    .channel__edit--popup.active{
+        max-width: 310px;
+    }
+    .belowVideo__social--favorite__text{
+        display: none;
+    }
+    .video__chat--message__avatar{
+        width: 22px;
+        height: 22px;
+    }
+    .video__chat--message__name{
+        font-size: 14px;
+    }
+    .video__chat--message__name{
+        font-size: 12px;
+    }
+    .video__chat--message__message--wrapper{
+        max-width: 180px;
+    }
+    .header__user--dropdown{
+        left: -100px;
+    }
+}
+
+/* 388px */
+@media (max-width: 388px){
+    .header__logo{
+        width: 140px;
+        height: 26px;
+    }
+    .channel__description{
+        display: none;
+    }
+    .belowVideo__related{
+        margin-left: 0;
+    }
+    .belowVideo__social--stats{
+        padding-left: 5px;
+    }
+    .belowVideo__related--channel__info{
+        max-width: 180px;
+    }
+    .google__button{
+        font-size: 14px;
+    }
+    .google__button--icon{
+        width: 20px;
+        height: 20px;
+    }
+}

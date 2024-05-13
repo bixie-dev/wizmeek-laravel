@@ -1,0 +1,498 @@
+.my-video-dimensions{
+    height: 394px;
+}
+.vjs-theme-sea .vjs-big-play-button{
+    background-color: $themeBgDark;
+    opacity: 0.5;
+}
+.vjs-theme-sea .vjs-control-bar{
+    background-color: $themeBgDark;
+    opacity: 0.8;
+}
+.vjs-theme-sea .vjs-progress-control .vjs-slider{
+    background-color: $inputBgDark;
+    opacity: 1;
+}
+.video-js .vjs-load-progress{
+    background-color: $textGrey;
+    opacity: 0.5;
+}
+
+.video{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    &__player--wrapper{
+        flex-flow: column nowrap;
+        margin-right: 30px;
+    }
+    &__player--wrapper__player{
+        max-width: 700px;
+        width: 100%;
+        & .video-js.vjs-default-skin{
+            width: 700px;
+            height: 393px;
+            & video{
+                width: 700px;
+                height: 393px;
+            }
+        }
+        & .video-js.vjs-default-skin.vjs-fullscreen{
+            & video{
+                width: 100vw;
+                height: 100vh;
+            }
+        }
+    }
+    &__player{
+        width: 700px;
+    }
+    &__chat--box{
+        width: 400px;
+        height: 464px;
+        border-radius: 12px;
+        background-color: $chatBgDark;
+        position: relative;
+        padding: 0px 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    &__chat--box__header{
+        min-height: 50px;
+        border-bottom: 1px solid grey;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 25px;
+        padding-right: 25px;
+        position: relative;
+    }
+    &__chat--box__heading{
+        @include pop600;
+        color: $textWhite;
+        font-size: 18px;
+        line-height: 24px;
+    }
+    &__chat--box__close{
+        display: none;
+    }
+    &__chat--box__counter{
+        display: flex;
+        align-items: center;
+    }
+    &__chat--box__counter--icon{
+        transform: scale(0.7);
+        fill: grey;
+    }
+    &__chat--box__counter--text{
+        @include pop400;
+        font-size: 14px;
+        color: grey;
+        margin-left: 10px;
+    }
+    &__chat--message__area{
+        height: 360px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        &::-webkit-scrollbar{
+            width: 8px;
+        }
+        &::-webkit-scrollbar-track{
+            background: transparent;
+        }
+        &::-webkit-scrollbar-thumb{
+            border-radius: 4px;
+            background-color: rgba($color: #000000, $alpha: 0.1);
+            transition: all .2s ease;
+        }
+        &::-webkit-scrollbar-thumb:hover{
+            border-radius: 4px;
+            background-color: rgba($color: #000000, $alpha: 0.3);
+        }
+    }
+    &__chat--message__wrapper{
+        display: flex;
+        padding: 10px 25px;
+        &:first-child{
+            margin-top: auto;
+        }
+    }
+    &__chat--message__wrapper.my_message{
+        flex-direction: row-reverse;
+        text-align: right;
+        .video__chat--message__avatar{
+            margin: 0;
+            margin-left: 15px;
+        }
+    }
+    &__chat--message__avatar{
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-right: 15px;
+        margin-top: 4px;
+    }
+    &__chat--message__message--wrapper{
+        max-width: calc(100% - 35px);
+        padding: 7px;
+        border-radius: 12px;
+        background-color: #1e202c;
+    }
+    &__chat--message{
+        width: 100%;
+        text-align: left;
+    }
+    &__chat--message__name{
+        @include pop400;
+        font-size: 12px;
+        line-height: 16px;
+        color: $textWhite;
+        margin-bottom: 5px;
+        text-decoration: none;
+        display: inline;
+    }
+    &__chat--message__text,
+    &__chat--message__date{
+        @include pop400;
+        font-size: 12px;
+        line-height: 16px;
+        color: grey;
+        display: inline;
+    }
+    &__chat--message__date{
+        font-size: 10px;
+        line-height: 14px;
+    }
+    /* Send Message block */
+    &__chat--send__message--wrapper{
+        position: relative;
+        max-width: 370px;
+        width: 100%;
+        height: 35px;
+        border-radius: 14px;
+        background-color: $inputBgDark;
+        margin-top: auto;
+        margin-bottom: 10px;
+    }
+    &__chat--send__message--input{
+        border: none;
+        outline: none;
+        background-color: $inputBgDark;
+        border-radius: 14px;
+        max-width: 370px;
+        width: 100%;
+        @include pop400;
+        font-size: 16px;
+        line-height: 35px;
+        padding-left: 50px;
+        padding-right: 50px;
+        color: grey;
+    }
+    &__chat--send__message--button,
+    &__chat--send__message--emoji__button{
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        border: none;
+        outline: none;
+        border-radius: 50%;
+        background-color: $buttonPurple;
+        right: 10px;
+        top: 50%;
+        transform: translate(0, -50%);
+        cursor: pointer;
+    }
+    &__chat--send__message--send__icon{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 11px;
+        height: 11px;
+        transform: translate(-50%, -50%);
+        fill: $textWhite;
+    }
+    &__chat--send__message--emoji__button{
+        left: 10px;
+        background-color: $textGrey;
+
+    }
+    &__chat--send__message--emoji__picker--wrapper {
+        display: none;
+        padding: 12px;
+        background-color: #1e202c;
+        border-radius: 4px;
+        position: absolute;
+        bottom: 48px;
+        left: 15px;
+        padding-top: 25px;
+    }
+    &__chat--send__message--emoji__picker--close {
+        position: absolute;
+        right: 5px;
+        top: 12px;
+        color: #615f70;
+        font-family: 'Poppins', sans-serif;
+        cursor: pointer;
+    }
+    &__chat--send__message--emoji__picker {
+        max-width: 150px;
+        width: 100%;
+        padding: 7px;
+        background-color: $themeBgDark;
+        display: flex;
+        flex-wrap: wrap;
+        height: 100px;
+        overflow-y: scroll;
+        border-radius: 6px;
+        p {
+            margin: 7px;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+    }
+    &__chat--send__message--emoji__icon{
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        fill: $darkGrey;
+    }
+}
+
+
+/* Below Video Section */
+.belowVideo{
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__info{
+        max-width: 450px;
+        padding: 0px 15px;
+    }
+    &__heading{
+        @include pop600;
+        font-size: 22px;
+        line-height: 28px;
+        color: $textWhite;
+        margin-bottom: 12px;
+    }
+    &__text{
+        @include pop400;
+        font-size: 14px;
+        line-height: 22px;
+        color: $textWhite;
+    }
+    &__social--block{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-flow: row nowrap;
+        padding: 20px 0;
+        border-bottom: 1px solid $inputBgDark;
+        div + div {
+            margin-right: 10px;
+        }
+    }
+    &__social--share,
+    &__social--like,
+    &__social--widget{
+        padding: 6px 12px;
+        border-radius: $buttonRadius;
+        border: none;
+        outline: none;
+        background-color: $buttonGrey;
+        display: flex;
+        align-items: center;
+        @include pop400;
+        font-size: 12px;
+        line-height: 12px;
+        color: $textWhite;
+        cursor: pointer;
+    }
+    &__social--live{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-right: 15px;
+        span {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #FF0000;
+            margin-right: 5px;
+        }
+    }
+    &__social--share{
+        max-width: 250px;
+        width: 100%;
+    }
+    &__social--share__icon{
+        width: 18px;
+        height: 18px;
+        fill: $textWhite;
+        margin-right: 7px;
+    }
+    &__social--like{
+        background-color: #353340;
+        margin-left: 10px;
+    }
+    &__social--stats{
+        @include pop400;
+        font-size: 14px;
+        line-height: 18px;
+        color: $textGrey;
+        padding-left: 15px;
+        position: relative;
+    }
+    &__social--stats__row{
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    &__social--icon{
+        width: 15px;
+        height: 15px;
+        fill: $textGrey;
+    }
+    &__related{
+        max-width: 390px;
+        width: 100%;
+        margin-left: 15px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    &__related--heading{
+        @include pop600;
+        font-size: 18px;
+        line-height: 24px;
+        color: $textWhite;
+        margin-bottom: 10px;
+    }
+    &__related--channel{
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+    &__related--channel__img{
+        width: 100px;
+        height: 80px;
+        border-radius: $buttonRadius;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-right: 15px;
+    }
+    &__related--channel__info{
+        min-height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        max-width: 250px;
+        width: 100%;
+    }
+    &__related--channel__description{
+        @include pop600;
+        font-size: 16px;
+        line-height: 22px;
+        color: $textWhite;
+        text-decoration: none;
+    }
+    &__related--channel__heading{
+        @include pop400;
+        font-size: 14px;
+        line-height: 18px;
+        color: $textGrey;
+        text-decoration: none;
+        margin-bottom: 10px;
+    }
+    &__related--channel__stats{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        @include pop400;
+        font-size: 12px;
+        line-height: 16px;
+        color: $textGrey;
+        div + div{
+            margin-left: 10px;
+        }
+    }
+    &__related--channel__link--wrapper{
+        display: flex;
+        justify-content: center;
+    }
+    &__related--channel__link{
+        padding: 8px 80px;
+        @include pop400;
+        font-size: 16px;
+        line-height: 18px;
+        color: $textWhite;
+        text-decoration: none;
+        background-color: $buttonPurple;
+        border-radius: 6px;
+    }
+}
+#heartFilled {
+    fill: $notificationGreen;
+}
+.request__repeat{
+    position: relative;
+    transition: all ease .2s;
+}
+.request__repeat.active{
+    border-radius: 6px 6px 0px 0px;
+}
+.request__repeat--form__wrapper{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 500;
+}
+.request__repeat--form{
+    display: flex;
+    flex-direction: column;
+    padding: 12px 5px 5px;
+    border-radius: 0px 0px 6px 6px;
+    background-color: $buttonGrey;
+}
+.request__repeat--input{
+    border: none;
+    outline: none;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    background-color: $inputBgDark;
+    padding: 8px;
+    color: #FFF;
+    width: 100%;
+}
+.request__repeat--btn{
+    border: none;
+    outline: none;
+    background-color: $buttonPurple;
+    color: $textWhite;
+    padding: 7px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.plyr--video{
+    max-width: 650px;
+    width: 100%;
+}
+
+/* Submit video section */
+
+.emoji-picker-single-emoji {
+
+}

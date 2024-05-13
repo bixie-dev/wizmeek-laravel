@@ -1,0 +1,140 @@
+.channel{
+    min-height: 50px;
+    background-color: $sectionBgDark;
+    border-radius: $themeRadius;
+    display: flex;
+    align-items: center;
+    padding: 12px 30px;
+    margin-bottom: 15px;
+    &__logo{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-right: 20px;
+    }
+    &__name{
+        @include pop600;
+        font-size: 18px;
+        line-height: 22px;
+        color: $textWhite;
+        margin-bottom: 7px;
+    }
+    &__description{
+        @include pop400;
+        font-size: 14px;
+        line-height: 18px;
+        color: $textWhite;
+    }
+    &__edit{
+        width: 30px;
+        height: 30px;
+        margin-left: auto;
+        cursor: pointer;
+    }
+    &__edit--icon{
+        fill: $textGrey;
+        width: 30px;
+        height: 30px;
+    }
+    &__edit--popup{
+        width: 450px;
+        height: 0;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        background-color: $chatBgDark;
+        z-index: 600;
+        left: 50%;
+        top: 150px;
+        transform: translate(-50%, 0);
+        border-radius: 8px;
+        transition: all .3s ease;
+        &.active{
+            height: auto;
+            opacity: 1;
+            padding: 20px;
+            border: 1px solid $textGrey;
+            box-shadow: 0px 0px 100px 27px #000;
+        }
+    }
+    &__edit--form__close--icon{
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        fill: $textGrey;
+        right: 20px;
+        top: 15px;
+        cursor: pointer;
+    }
+    &__edit--form{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    &__edit--form__label{
+        margin-bottom: 10px;
+    }
+    &__edit--form__heading{
+        @include pop600;
+        font-size: 22px;
+        line-height: 28px;
+        color: $textWhite;
+        margin-bottom: 15px;
+    }
+    &__edit--form__p{
+        @include pop400;
+        font-size: 14px;
+        line-height: 18px;
+        color: $textWhite;
+        margin-bottom: 5px;
+    }
+    &__edit--form__input{
+        width: 100%;
+        padding: 10px 25px;
+        border: none;
+        outline: none;
+        background-color: $inputBgDark;
+        border-radius: 8px;
+        @include pop400;
+        font-size: 14px;
+        line-height: 18px;
+        color: $textWhite;
+    }
+    &__edit--form__textarea--short,
+    &__edit--form__textarea--full{
+        width: 100%;
+        resize: none;
+        border: none;
+        outline: none;
+        background-color: $inputBgDark;
+        border-radius: 8px;
+        padding: 10px 25px;
+        @include pop400;
+        font-size: 14px;
+        line-height: 18px;
+        color: $textWhite;
+    }
+    &__edit--form__textarea--short{
+        height: 70px;
+    }
+    &__edit--form__textarea--full{
+        height: 220px;
+    }
+    &__edit--form__submit{
+        max-width: 150px;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        background-color: $buttonPurple;
+        padding: 10px;
+        border-radius: 8px;
+        @include pop400;
+        font-size: 18px;
+        line-height: 22px;
+        color: $textWhite;
+        margin-top: 25px;
+    }
+}

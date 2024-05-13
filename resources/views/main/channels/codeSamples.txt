@@ -1,0 +1,23 @@
+
+// Request repeat form inner
+<div id="artist_name_error" class="alert__danger"></div>
+                                <input name="artist_name" id="artist_name_input" class="request__repeat--input" type="text" placeholder="Artist's name">
+
+                                <div id="song_name_error" class="alert__danger"></div>
+                                <input name="song_name" id="song_name_input" class="request__repeat--input" type="text" placeholder="Song name">
+
+                                <!-- User ID -->
+                                <input name="user_id" class="request__repeat--input" type="hidden" value="{{ auth()->user()->id }}">
+                                <!-- Channel ID -->
+                                <input name="channel_id" class="request__repeat--input" type="hidden" value="{{ $channel->id }}">
+                                <!-- Geo Location Info -->
+                                @if($geo_data_array['status'] == 'success')
+                                    <input name="country" class="request__repeat--input" type="hidden" value="{{ $geo_data_array['country'] }}">
+                                    <input name="country_code" class="request__repeat--input" type="hidden" value="{{ $geo_data_array['countryCode'] }}">
+                                    <input name="region_name" class="request__repeat--input" type="hidden" value="{{ $geo_data_array['regionName'] }}">
+                                    <input name="region" class="request__repeat--input" type="hidden" value="{{ $geo_data_array['region'] }}">
+                                    <input name="city" class="request__repeat--input" type="hidden" value="{{ $geo_data_array['city'] }}">
+                                @endif
+
+                                <button id="request_repeat_form_btn" class="request__repeat--btn" type="submit">Request repeat</button>
+// // Request Repeat form inner

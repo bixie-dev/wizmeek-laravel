@@ -1,0 +1,40 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+@mixin pop100 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+}
+@mixin pop200 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+}
+@mixin pop300 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+@mixin pop400 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+@mixin pop500 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+@mixin pop600 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+@mixin pop700 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+@mixin pop800 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+}
+@mixin pop900 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+}

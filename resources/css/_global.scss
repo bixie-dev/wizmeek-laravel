@@ -1,0 +1,506 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height: 100%;
+    line-height: 0;
+}
+
+body{
+    background-color: $themeBgDark;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+footer{
+    margin-top: auto;
+}
+.container{
+    max-width: 1150px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px 15px;
+}
+
+.centered__wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    padding-top: 70px;
+}
+.centered__wrapper--login{
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Form styles */
+.theme__form,
+.theme__form--login{
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: $chatBgDark;
+    padding: 15px;
+    border-radius: 6px;
+    margin: 70px auto 20px;
+    &--input{
+        padding: 8px 15px;
+        background-color: $inputBgDark;
+        border: none;
+        outline: none;
+        border-radius: 6px;
+        @include pop400;
+        font-size: 18px;
+        line-height: 24px;
+        color: $textWhite;
+        margin-bottom: 15px;
+    }
+    &--button{
+        padding: 10px 15px;
+        border: none;
+        outline: none;
+        background-color: $buttonPurple;
+        border-radius: 6px;
+        @include pop600;
+        font-size: 18px;
+        line-height: 24px;
+        color: $textWhite;
+        margin-top: 40px;
+    }
+    &--hr{
+        width: 100%;
+        height: 1px;
+        background-color: $textGrey;
+        margin: 15px 0px;
+    }
+    &--additional__text{
+        @include pop400;
+        font-size: 16px;
+        line-height: 24px;
+        color: $textWhite;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+}
+
+.theme__form--login{
+    margin: 0 auto;
+}
+.remember__me{
+    display: flex;
+    margin-bottom: 15px;
+    input{
+        margin-right: 20px;
+    }
+    label{
+        @include pop400;
+        font-size: 14px;
+        line-height: 20px;
+        color: $textWhite;
+    }
+}
+.google__button{
+    padding: 10px 15px;
+    background-color: $buttonPurple;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include pop600;
+    font-size: 18px;
+    line-height: 28px;
+    color: $textWhite;
+    text-decoration: none;
+    border-radius: 6px;
+    &--icon{
+        width: 30px;
+        height: 30px;
+        fill: $textWhite;
+        margin-right: 25px;
+    }
+}
+/* End Form styles */
+
+/* About styles */
+.about{
+    max-width: 950px;
+    width: 100%;
+    margin-bottom: 50px;
+    padding: 24px 36px;
+    background-color: #e6dddd;
+    border-radius: 8px;
+    margin-top: 100px;
+    p {
+        line-height: 1.4;
+    }
+    ul {
+        li {
+            list-style: none;
+            position: relative;
+            padding-left: 12px !important;
+            line-height: 1;
+            margin-left: 12px !important;
+            &::before {
+                content: '';
+                position: absolute;
+                width: 4px;
+                height: 4px;
+                background-color: #000;
+                border-radius: 50%;
+                left: 0;
+                top: 5px;
+            }
+        }
+    }
+    &__heading{
+        @include pop600;
+        font-size: 32px;
+        line-height: 40px;
+        color: $textWhite;
+        margin-bottom: 20px;
+        color: #000
+    }
+    &__text{
+        @include pop400;
+        font-size: 18px;
+        line-height: 24px;
+        color: #fff;
+        color: #000;
+        text-align: justify;
+    }
+}
+/* End about styles */
+
+/* CSS test block */
+.someBar{
+    position: fixed;
+    width: 100vw;
+    height: 56px;
+    background-color: red;
+}
+/* end CSS test block */
+
+/* Notifications */
+.alert__danger{
+    @include pop400;
+    font-size: 11px;
+    line-height: 16px;
+    color: $buttonRed;
+    margin-bottom: 10px;
+    display: none;
+}
+.alert__danger--static {
+    @include pop400;
+    font-size: 11px;
+    line-height: 16px;
+    color: $buttonRed;
+    margin-bottom: 10px;
+}
+
+/* Forms */
+.theme{
+    &__form{
+        position: relative;
+    }
+    &__form--heading{
+        @include pop600;
+        font-size: 20px;
+        line-height: 24px;
+        color: #FFF;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    &__form--label{
+        @include pop400;
+        font-size: 12px;
+        line-height: 18px;
+        color: $textWhite;
+        margin-bottom: 10px;
+    }
+    &__form--input{
+        @include pop400;
+        font-size: 12px;
+        line-height: 24px;
+        color: $textGrey;
+    }
+    &__form--success {
+        width: 100%;
+        padding: 25px 16px;
+        border-radius: 6px;
+        margin-bottom: 30px;
+        text-align: center;
+        color: #fff;
+        background-color: #4bbb67;
+    }
+    &__form--alert {
+        margin-bottom: 15px;
+        color: rgb(212, 83, 83);
+    }
+    &__form--betweenInputs__text{
+        text-align: center;
+        @include pop400;
+        font-size: 14px;
+        line-height: 24px;
+        color: $textWhite;
+        margin-bottom: 10px;
+    }
+    &__form--select__wrapper{
+        position: relative;
+    }
+    &__form--select__arrow{
+        position: absolute;
+        top: 11px;
+        right: 15px;
+        fill: $textGrey;
+        width: 20px;
+        height: 20px;
+    }
+    &__form--select{
+        border: none;
+        outline: none;
+        appearance: none;
+        width: 100%;
+        padding: 8px 15px;
+        background-color: $inputBgDark;
+        border-radius: $rad6;
+        @include pop400;
+        font-size: 12px;
+        line-height: 24px;
+        color: $textGrey;
+        margin-bottom: 15px;
+    }
+    &__form--link{
+        @include pop400;
+        text-decoration: none;
+        color: grey;
+    }
+}
+.form{
+    &__wrapper{
+        position: relative;
+    }
+    &__block{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    &__block--file__input{
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+    }
+    &__block--file__holder{
+        display: block;
+        width: 100%;
+        height: 40px;
+        padding: 8px 120px 8px 15px;
+        background-color: $inputBgDark;
+        border-radius: $rad6;
+        @include pop400;
+        font-size: 12px;
+        line-height: 24px;
+        color: $textGrey;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 15px;
+    }
+    &__block--file__label{
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 55px;
+        max-width: 55px;
+        width: 100%;
+        background-color: $buttonPurple;
+        cursor: pointer;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-right: 2px solid $inputBgDark;
+    }
+    &__block--file__upload{
+        position: absolute;
+        right: 0;
+        top: 0;
+        max-width: 55px;
+        width: 100%;
+        border: none;
+        outline: none;
+        height: 100%;
+        background-color: $notificationGreen;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    &__block--file__upload--icon{
+        width: 25px;
+        height: 25px;
+        fill: $textWhite;
+    }
+    &__block--progress__bar{
+        width: 100%;
+        height: 0px;
+        border-radius: 9px;
+        background-color: $inputBgDark;
+        overflow: hidden;
+        margin-bottom: 15px;
+        position: relative;
+        transition: all .3s ease;
+        &.active{
+            height: 18px;
+        }
+    }
+    &__block--progress_line{
+        height: 100%;
+        border-radius: 9px;
+        background-color: $notificationGreen;
+    }
+    &__block--percentage{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @include pop600;
+        font-size: 12px;
+        line-height: 18px;
+        color: $textWhite;
+    }
+    &__block--video__container{
+        overflow: hidden;
+        margin-bottom: 15px;
+    }
+    &__block--submit{
+        @include pop600;
+        font-size: 14px;
+        line-height: 20px;
+        color: $textWhite;
+        text-align: center;
+        background-color: $buttonPurple;
+        padding: 8px;
+        border-radius: $rad6;
+        outline: none;
+        cursor: pointer;
+        border: none;
+    }
+    &__block--youtube__container,
+    &__block--video__container{
+        display: flex;
+        justify-content: center;
+        height: 0;
+        transition: all 1s ease;
+        overflow: hidden;
+        &.active{
+            height: 113px;
+        }
+    }
+    &__success--wrapper{
+        max-width: 350px;
+        width: 100%;
+        border-radius: $rad6;
+        background-color: $notificationGreen;
+        padding: 20px;
+        margin: 0 auto;
+        text-align: center;
+        display: none;
+    }
+    &__success--icon{
+        width: 50px;
+        height: 50px;
+        fill: $textWhite;
+        margin-bottom: 10px;
+    }
+    &__success--message__heading{
+        @include pop600;
+        font-size: 16px;
+        line-height: 24px;
+        color: $textWhite;
+        margin-bottom: 25px;
+    }
+    &__success--message__text{
+        @include pop400;
+        font-size: 14px;
+        line-height: 20px;
+        color: $textWhite;
+    }
+}
+
+/* Animation */
+@keyframes rotate {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Variables */
+  $loader-size: 50px;
+  
+  /* Loading Icon */
+  .loading {
+    &__wrapper{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        background-color: #000;
+        opacity: 0.7;
+        display: none;
+    }
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: $loader-size;
+    height: $loader-size;
+  
+    &__ring {
+      position: absolute;
+      width: $loader-size;
+      height: $loader-size;
+      
+      &:first-child {
+        transform: skew(30deg,20deg);
+      }
+  
+      &:last-child {
+        transform: skew(-30deg,-20deg) scale(-1, 1);
+  
+        svg {
+          animation-delay: -0.5s;
+        }
+      }
+  
+      svg {
+        animation: rotate 1s linear infinite;
+        fill: $textGrey;
+      }
+    }
+  }
+  .submit__info--wrapper{
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .info__text--neutral{
+    @include pop400;
+    font-size: 12px;
+    line-height: 18px;
+    color: $textWhite;
+    margin-bottom: 20px;
+  }
+  .info__text--note{
+    @include pop400;
+    font-size: 12px;
+    line-height: 18px;
+    color: $buttonRed;
+    margin-bottom: 20px;
+  }
